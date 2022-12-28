@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>택배 계산기</title>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+        <title>특별한 계산기</title>
     </head>
     <body>
-      <div>test</div>
+        <div id="container">
+            <div id="display">
+                <div class="output">
+                    <input id="freight_output" type="text" value="화물: 0원" />
+                </div>
+                <div class="output">
+                    <input id="parcel_output" type="text" value="택배: 0원" />
+                </div>
+                <div class="input">
+                    <input id="calc_input" type="text" />
+                </div>
+            </div>
+            <div id="number_pad">
+                <div>
+                    <button onclick="reset()">AC</button>
+                    <button onclick="del()">C</button>
+                    <button onclick="add('%')">%</button>
+                    <button onclick="add('/')">/</button>
+                </div>
+                <div>
+                    <button onclick="add(9)">9</button>
+                    <button onclick="add(8)">8</button>
+                    <button onclick="add(7)">7</button>
+                    <button onclick="add('*')">*</button>
+                </div>
+                <div>
+                    <button onclick="add(6)">6</button>
+                    <button onclick="add(5)">5</button>
+                    <button onclick="add(4)">4</button>
+                    <button onclick="add('+')">+</button>
+                </div>
+                <div>
+                    <button onclick="add(3)">3</button>
+                    <button onclick="add(2)">2</button>
+                    <button onclick="add(1)">1</button>
+                    <button onclick="add('-')">-</button>
+                </div>
+                <div>
+                    <button onclick="add('00')">00</button>
+                    <button onclick="add(0)">0</button>
+                    <button onclick="add('.')">.</button>
+                    <button onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+        <script src="./spcl_calc.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
